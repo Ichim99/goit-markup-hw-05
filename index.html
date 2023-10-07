@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body >
+          <!--Header section-->
     <header class="container-header">
-        <a href="./index.html" class="logo">Web<span class="logo2">Studio</span></a>
+        <a href="./index.html" class="logo" >Web<span class="logo2">Studio</span></a>
         <nav >
             <ul class="nav-bar">
                 <li><a href="./index.html" class="main-nav" id="current">Studio</a></li>
@@ -21,26 +22,30 @@
             </ul>
         </nav>
         <ul class="links-bar">
-            <li>
-                <a  href="mailto:info@devstudio.com" class="social-link" ><svg class="icon-post">
+            <li class="email-social">
+                <svg class="icon-post">
                     <use xlink:href="./images/icons.svg#icon-post" height="12px" width="16px"></use>
-                  </svg>info@devstudio.com</a></li>
-            <li>
-                <a href="tel:+1-212-772-4150" class="social-link"><svg class="icon-smartphone">
+                  </svg>
+                <a  href="mailto:info@devstudio.com" class="social-link" >info@devstudio.com</a></li> 
+            <li class="smartphone-social">
+                <svg class="icon-smartphone">
                     <use xlink:href="./images/icons.svg#icon-smartphone"></use>
-                  </svg>+1 212-772-4150</a></li>
+                  </svg>
+                <a href="tel:+1-212-772-4150" class="social-link">+1 212-772-4150</a></li>
         </ul>
 
     </header>
-
+          <!--Main section-->
     <main>
         <section class="title-section">
             <h1 class="title">EFFECTIVE SOLUTIONS FOR <br>YOUR BUSINESS</h1>
-            <button type="button" class="button">Request our service</button>
+            <button data-modal-open class="button" >Request our service</button>
             
+  
+  </div>
         </section>
         
-        <section >
+        <section class="section-info">
             <ul class="container-info">
             <li> 
                 <div class="info-logo-container"><svg class="icon" >
@@ -76,13 +81,25 @@
             </ul>
         </section>
 
-        <section class="container-3photo">
+        <section class="container-we-do">
             <h2 class="section-title">What we do</h2>
-            <ul class="photo-we-do">
-                <li class="photo-we-do"><img src="./images/box-1.jpg" alt="work" width="370" height="294"/></li>
-                <li class="photo-we-do"><img src="./images/box-2.jpg" alt="work" width="370" height="294"/></li>
-                <li class="photo-we-do"><img src="./images/box-3.jpg" alt="work" width="370" height="294"/></li>
-            </ul>    
+            <div class="photos-we-do">
+                <div class="container-photo">
+                    <img  src="./images/box-1.jpg" alt="work" width="370" height="294"/>
+                    <div class="title-we-do">DESKTOP APPS</div>
+                </div>
+                <div class="container-photo">
+                    <img src="./images/box-2.jpg" alt="work" width="370" height="294"/>
+                    <div class="title-we-do">MOBILE APPS</div>
+                </div>
+                <div class="container-photo">
+                    <img src="./images/box-3.jpg" alt="work" width="370" height="294"/>
+                    <div class="title-we-do">DESIGN SOLUTIONS</div>
+                </div>
+
+            </div>
+
+
         </section>
        
         <section class="container-team">
@@ -246,9 +263,11 @@
         </section>
 
     </main>
-
+          <!--Footer section-->
     <footer class="footer-zone">
-        <div><a href="./index.html"class="footer-logo" >Web<span class="logo2-footer">Studio</span></a>
+    <div class="footer-zone-2">
+        <div >
+            <a href="./index.html"class="footer-logo" >Web<span class="logo2-footer">Studio</span></a>
         <address>
             <ul class="footer-address">
                 <li class="location">695 Park Ave, NY 10065, USA</li>
@@ -282,8 +301,21 @@
             </div>
             </div>
          
-    </div>
+        </div></div>
+        
+
     </footer>
+
+      <!-- Book Service Modal -->
+      <div class="modal is-hidden" class="modal" data-modal>
+        <div class="modal-content">
+        <button class="close-btn" data-modal-close> <svg class="icon-close"  width="18" height="18">
+            <use xlink:href="./images/icons.svg#icon-close" ></use>
+            </svg></button>
+        </div>
+      </div>
+      
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
